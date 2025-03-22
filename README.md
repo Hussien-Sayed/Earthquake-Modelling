@@ -25,12 +25,18 @@ For regression models, the objective is to predict the magnitude of the earthqua
 The following results show that most of the experiments fail to beat the baseline score. However, the LGBM lag experiment was able to beat the baseline by a small value. We further check the significance of this small value using McNemar's test and we show that the small improvement in accuracy is significant.
 
 ### Transformer model (Regression)
+![Transformer Regression](https://github.com/user-attachments/assets/325f5914-ee33-4767-876f-e21cf37d79df)
 
 ### LGMB (Regression)
+![LGBM regression](https://github.com/user-attachments/assets/cfcc9702-891e-43a4-879a-179bbe0be741)
 
 ### FFNN (Classification)
+![FFNN classification](https://github.com/user-attachments/assets/29292dee-a718-4558-af9c-915c0bc0ca36)
 
 ### LGMB (Classification)
+![LGBM classification](https://github.com/user-attachments/assets/52aa1e0a-4546-4295-8953-20da6253d962)
 
 ### LGMB with lags (Classification)
+![lgbm-lag](https://github.com/user-attachments/assets/e3d7e558-736e-4dde-8754-acacd7dbff8c)
 
+The p-value of McNemar's test in this experiment is 0.0009 which indicates rejection of null hypothesis indicating a singificant difference from the baseline.
