@@ -6,6 +6,9 @@ We first clarify that the previous analysis had a bad confusion that lead to a m
 ## Data Preparation
 In this analysis we further extend the data by introducing synthetic data where earthquakes didn’t have a record by our data source (of all magnitudes less than 4.8). We extend the merged dataset such that we have a single record for each (day-location cluster) (where location clusters are k-means clusters of longitude and latitude features). So for each day we should have k location clusters and for each we have a single record of the earthquake value. If the earthquake value / values were found as original records we consider the mean of their value in our new extended data, otherwise, we consider a median value (which is 2.4) for any missing record. For the synthetic no earthquake records, location values are picked as random values within the record cluster. By doing that we have a dataset that we can apply analysis to, and we can have a fair comparison between earthquakes which are bigger than 4.8 and which are less than 4.8. 
 
+The used dataset can be found here:
+https://drive.google.com/file/d/117OQqDwkn_RonFugMnB5XFytgswMJVhu/view?usp=drive_link
+
 ## Confusion clarification
 Lunar illumination cycle is a little tricky to be interpreted, especially when one wants to tie illumination distribution across a lunar month to something else. The distribution of moon illumination across the lunar month is not uniform. Instead, the illumination periods of new moon and full moon are long relative to other periods. If we check the distribution of the illumination for these 2 cases in our new extended data, we notice no difference in the illumination distribution.
 ![distribution_ill_comp](https://github.com/user-attachments/assets/b1ee372d-c173-40a3-9a58-44128462076a)
